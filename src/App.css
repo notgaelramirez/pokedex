@@ -34,7 +34,6 @@ h1:hover{
   color: black;
 }
 
-
 .nav-ul{
   justify-content: flex-end;
   padding-right: 30px;
@@ -60,9 +59,13 @@ article{
 }
 
 .cards{
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  padding-bottom: 30px;
 }
 
 .card{
@@ -71,14 +74,25 @@ article{
   max-width: 18vw;
   box-shadow: 5px 5px 5px -2px rgba(0,0,0,.25);
   border-radius: 0px 10px 10px 10px;
+  transition: .2s ease;
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .name{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
   min-width: inherit;
   text-align: center;
   text-transform: capitalize;
 }
 
 .pokemon-img{
-  max-width: inherit;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  max-width: 150px;
 }

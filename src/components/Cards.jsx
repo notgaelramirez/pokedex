@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import PokemonCard from './PokemonCard'
+import {Link, Route, Routes} from 'react-router-dom'
+import PokemonPage from './PokemonPage'
 
 const Cards = () => {
 
@@ -20,10 +22,17 @@ const Cards = () => {
   return (
     <div>
       <article className='cards'>
-        {pokemons?.map(pokemon =>
+        
+        <Link className='cards link' to='/pokedex/unico'>
+          {pokemons?.map(pokemon =>
         <PokemonCard 
         pokemon={pokemon}
         />)}
+        </Link>
+        
+        <Routes>
+          <Route path='/pokedex/unico' element={<PokemonPage/>}/>
+        </Routes>
       </article>
     </div>
   )
